@@ -1,0 +1,31 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const identity = {
+    firstName: "Elliot",
+    lastName: "Garcia Lopez",
+    country: "Uzbekiztan",
+    occupation: "Estudiante de Desarrollo de Software",
+    hobbies: ["ir al gimnasio", "jugar futbol", "Chambear  "],
+};
+const pets = [
+    { name: "Dukesa", type: "perra" },
+    { name: "Principe", type: "perro" },
+];
+---
+<BaseLayout pageTitle="Sobre mi">
+    <p>
+        Soy {identity.firstName} {identity.lastName}, de {identity.country}, y actualmente estoy estudiando {identity.occupation}.
+    </p>
+
+    <p>
+        Fuera de la escuela trabajo como barista en un CafeBar , algo que disfruto porque me mantiene activo y en contacto con gente todo el dia.
+    </p>
+
+    <p>
+        En mi tiempo libre me gusta {identity.hobbies.join(', ')}. Me molesta no estar chambeando la mera neta patineta 
+    </p>
+
+    <p>
+        En casa tengo dos hijos increibles  que quiero mucho: {pets.map(p => p.name).join(' y ')}, mi {pets[0].type} y mi {pets[1].type}, que siempre estoy con ellos el mas tiempo que puedo.
+    </p>
+</BaseLayout>

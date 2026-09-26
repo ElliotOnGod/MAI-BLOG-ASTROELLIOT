@@ -1,0 +1,53 @@
+---
+const { pageTitle } = Astro.props;
+---
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>{pageTitle}</title>
+	</head>
+	<body>
+		<nav>
+			<a href="/">Inicio</a>
+			<a href="/about">About</a>
+			<a href="/blog">Blog</a>
+		</nav>
+		<h1>{pageTitle}</h1>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		--neon-cyan: #00fff9;
+		--neon-pink: #ff71ce;
+		--neon-blue: #01cdfe;
+		--bg-dark: #2b0a3d;
+	}
+	body {
+		margin: 0;
+		min-height: 100vh;
+		background: linear-gradient(180deg, var(--bg-dark) 0%, #ff6ad5 60%, #ff9ecd 100%);
+		font-family: "Courier New", monospace;
+		color: white;
+		padding: 2rem;
+	}
+	h1 {
+		color: var(--neon-cyan);
+		text-shadow: 2px 2px 0 var(--neon-pink), -2px -2px 0 var(--neon-blue);
+	}
+	nav {
+		display: flex;
+		gap: 1.5rem;
+		margin-bottom: 2rem;
+	}
+	nav a {
+		color: var(--neon-blue);
+		text-decoration: none;
+		font-weight: bold;
+	}
+	nav a:hover {
+		color: var(--neon-pink);
+	}
+</style>
