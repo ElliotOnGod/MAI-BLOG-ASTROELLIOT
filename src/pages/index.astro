@@ -1,31 +1,6 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
----
-<html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<title>Mi sitio Astro</title>
-	</head>
-	<body>
-		<h1>MAI BLOG</h1>
-	</body>
-</html>
-
-<style>
-	body {
-		margin: 0;
-		min-height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: linear-gradient(180deg, #2b0a3d 0%, #ff6ad5 60%, #ff9ecd 100%);
-		font-family: "Courier New", monospace;
-	}
-	h1 {
-		font-size: 3rem;
-		color: #00fff9;
-		text-shadow:
-			2px 2px 0 #ff71ce,
-			-2px -2px 0 #01cdfe;
-		letter-spacing: 2px;
-	}
-</style>
+<BaseLayout pageTitle="Mi Blog">
+    <p>Bienvenido a mi rincon vaporwave del internet.</p>
+</BaseLayout>
